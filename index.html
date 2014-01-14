@@ -25,6 +25,21 @@
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
+		<style>
+		@font-face {
+  			font-family: 'News Cycle';
+  			font-style: normal;
+  			font-weight: 400;
+  			src: local('News Cycle Regular'), local('NewsCycle-Regular'), url(9Xe8dq6pQDsPyVH2D3tMQr3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+		}
+		@font-face {
+		  font-family: 'News Cycle';
+		  font-style: normal;
+		  font-weight: 700;
+		  src: local('News Cycle Bold'), local('NewsCycle-Bold'), url(G28Ny31cr5orMqEQy6ljt3bFhgvWbfSbdVg11QabG8w.woff) format('woff');
+		}
+		</style>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -66,7 +81,8 @@
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 				math: {
-        		mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        		mathjax: 'js/MathJax.js',
+        		//mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
         		config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
     			},
 				// Parallax scrolling
