@@ -349,7 +349,7 @@ Relationship between neighborhood sources of stress and cortisol levels is compl
 </div>
 
 <div style="width:60%;float:right">
-<img src="./Dofig.png" width="800" height="400">
+<img src="./DoFig.png" width="800" height="400">
 <small>(Do et al., 2011.)</small>
 </div>
 
