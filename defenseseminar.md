@@ -383,6 +383,8 @@ we were left with the challenge: How to construct a controlled analysis?
 
 when say blunting talk about possible washout effect
 
+strong predictors like sample time, etc. combined ps matching with matching on the subset of these especially important predictors. explain.
+
 ---
 
 ## Aim 2: Analysis
@@ -519,7 +521,7 @@ Conditional expected ratios of cortisol levels (left) and <br> conditional expec
 
 <img src="./cortres.png" width="1300" height="450">
 
-Note: So in all the models, we see that adolescents in disadvantaged neighborhoods have slightly higher cortisol levels prior to the interview than those in disadvantaged neighborhoods. 
+Note: So in all the models, we see that adolescents in disadvantaged neighborhoods have slightly higher cortisol levels prior to the interview than those in non-disadvantaged neighborhoods. 
 We see that there's no real difference in post-interview levels. 
 Adolescents in disadvantaged neighbrohoods have slighly steeper cortisol rates of decline over the course of the interview than those in non-disadvantaged nieghborhodos. 
 We interpreted these results as possibly reflecting heightened reactivity to and recovery from the novel stimulus of the interview. 
@@ -598,7 +600,7 @@ $$w^{A=a, \Delta\_{svy}=1, \Delta\_{sub}=1} = \frac{I(A=a, \Delta\_{sub}=1, \Del
 $$E(Y\_1 - Y\_0) = \frac{1}{\sum\limits^r\_{i=1}w\_i^{A=a, \Delta\_{svy=1}, \Delta\_{sub}=1}}\sum\limits^r\_{i=1}w\_i(2A\_i-1)Y\_i$$
 
 Note: 
-When I initially came across this issue, I thought I'd just use inverse probability weights. In terms of the Aim 2 exampls, This approach would involve weighting each adolescent by her predicted probability of living in a disadvantaged neighborhood as a fxn of covariates and being selected into the NCS-A and sub-sample with cortisol measures as a fxn of covariates. Then, we would subtract the weighted average cortisol slope for those who did not recieve treatment from the weighted average cortisol level for those who did receive treatment. If these tx and sel models are correctly specified, then this approach will adjust for all 3 sources of non-randomness.
+When I initially came across this issue, I thought I'd just use inverse probability weights. In terms of the Aim 2 example, This approach would involve weighting each adolescent by her predicted probability of living in the type of neighborhood she lives in--disadvanatved or non-disadvantaged and being selected into the NCS-A and sub-sample with cortisol measures as a fxn of covariates. Then, we would take the difference in the weighted average outcome measures between those who lived in disadvantaged neighborhoods and nondisadvantaged neighborhoods.  If these tx and sel models are correctly specified, then this approach will adjust for all 3 sources of non-randomness.
 However, in this scenario, that approach would involve multiplying 3 weights--(1) survey weights, (2) inverse probability of selection in the sub-sample weights, and (3) inverse probability of treatment weights. IPW already have efficiency concerns, and we were worried that they might get unweildy. So we wanted to compare IPW to some other options that might perform as well or better but would be similarly simple to implement.
 
 
