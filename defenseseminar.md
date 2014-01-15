@@ -113,7 +113,7 @@ Note:
 
 
 Note: 
-2. positivity violations, which means that for a particular set of covariate values, assignment of neighborhood is completely defined--there is no randonmess. I'll get into this more later, but one example of where this can come about in neihgborhood research is due to the economic and racial segregation of neihgborhoods in this country. For example... 
+2. positivity violations represent another methodologic challenge. Pos viols means that for a particular set of covariate values, assignment of neighborhood is completely defined--there is no randonmess. I'll get into this more later, but one example of where this can come about in neihgborhood research is due to the economic and racial segregation of neihgborhoods in this country. For example... 
 
 
 ---
@@ -127,8 +127,8 @@ Note:
   * Lack of generalizability (neighborhood studies are typically conducted among a particular sub-population)
 
 Note: 
-3. Lack of generalizability. means that results estimated in some study samples may not be valid for other samples or target populations. [read]
-In this dissertation, we addressed each of these--as least in part
+3. A 3rd challenge that could contribute to inconsistent results is a Lack of generalizability. means that results estimated in some study samples may not be valid for other samples or target populations. [read]
+In this dissertation, we addressed each of these methodologic challenges--as least in part
 
 
 ---
@@ -173,7 +173,7 @@ Note: For this dissertation, we use data from the NCSA.
 read first bullet
 The NCS-A collects information from a variety of sources, but i'll just go through the sources that are relevant to this disseration
 read through
-CIDI = Composite international diagnostic interview, corresponds to DSM-IV and ICD-9 diagnoses.
+CIDI = Composite international diagnostic interview, corresponds to DSM-IV and ICD-10 diagnoses.
 saliva was collected before and after each interview for the cortisol samples. 
 
 
@@ -235,7 +235,7 @@ The definition of mental disorders is partciularly strong, because the instrumen
 
 Note: Here is an outline of our analysis approach. [first 2 bullets] 
 
-That's what I'm showing in the figure on the right. 
+This was to address posible positivity violations. That's what I'm showing in the figure on the right. 
 
 describe fig 
 
@@ -378,9 +378,9 @@ Diurnal rhythm | Propensity score matching with Mahalanobis matching
 Other strong predictors | Propensity score matching with exact matching
 
 Note: given this complexity, cortisol is ideally measured under very strict laboratory protocols, but this isn't practical in a large, nationally representative sample like the NCSA
-In the NCSA, cortisol was measured in the adolescents home right before the start of the interview and right after. 
 we were left with the challenge: How to construct a controlled analysis?
 
+(first part: not at risk for cortisol being influenced by environmental sources of stress)
 when say blunting talk about possible washout effect
 
 strong predictors like sample time, etc. combined ps matching with matching on the subset of these especially important predictors. explain.
@@ -396,9 +396,9 @@ strong predictors like sample time, etc. combined ps matching with matching on t
 
 Note: There were 3 cortisol outcomes that we examined in this analysis. [read the 3] These don't correspond to specific HPA axis dimensions, since cortisol wasn't measured under controlled conditions with standardized protocols, so I'm going to take a second to describe what these outcomes may reflect. 
 
-Preinterview sample taken right before the interview. likely reflect any activity the adolescent was engaged in prior to the interview, foods, as well as anticipation of the new situation of being interviewred in her home by a researcher for ta survey on mental health. Something out of the ordinary! And relevant, because the HPA access is particularly sensitive to novelty.
+Pre invterview levels likely reflect any activity the adolescent was engaged in prior to the interview, foods, as well as anticipation of the new situation of being interviewred in her home by a researcher for ta survey on mental health. Something out of the ordinary! And relevant, because the HPA access is particularly sensitive to novelty.
 
-Postinterview sample right after the interview. The interview was specifically designed not to be stressful, so adoelscents probably became pretty bored over the course of the interview. The post-interview levels may relfect that as well as the fact that now the adolescent has been sitting down for 2 and a half hours. 
+The interview was specifically designed not to be stressful, so adoelscents probably became pretty bored over the course of the interview. The post-interview levels may relfect that as well as the fact that now the adolescent has been sitting down for 2 and a half hours. 
 
 We also looked at slope over the course of the interview-- post - pre/ interview time. this can be thought of as a measure of recovery from this novel interview situation.
 
@@ -570,6 +570,7 @@ Note: To get an idea of what the association would be among the population of U.
 
 Note: slow down
 Here I;m showing which part of our conceptual frame work we're addressing in red. 
+stop talking
 
 ---
 
@@ -600,7 +601,7 @@ $$w^{A=a, \Delta\_{svy}=1, \Delta\_{sub}=1} = \frac{I(A=a, \Delta\_{sub}=1, \Del
 $$E(Y\_1 - Y\_0) = \frac{1}{\sum\limits^r\_{i=1}w\_i^{A=a, \Delta\_{svy=1}, \Delta\_{sub}=1}}\sum\limits^r\_{i=1}w\_i(2A\_i-1)Y\_i$$
 
 Note: 
-When I initially came across this issue, I thought I'd just use inverse probability weights. In terms of the Aim 2 example, This approach would involve weighting each adolescent by her predicted probability of living in the type of neighborhood she lives in--disadvanatved or non-disadvantaged and being selected into the NCS-A and sub-sample with cortisol measures as a fxn of covariates. Then, we would take the difference in the weighted average outcome measures between those who lived in disadvantaged neighborhoods and nondisadvantaged neighborhoods.  If these tx and sel models are correctly specified, then this approach will adjust for all 3 sources of non-randomness.
+When I initially came across this issue, I thought I'd just use inverse probability weights. In terms of the Aim 2 example, This approach would involve weighting each adolescent by her predicted probability of being selected into the NCS-A and sub-sample with cortisol measures and living in the type of neighborhood she lives in--disadvanatved or non-disadvantaged and  as a fxn of covariates. Then, we would take the average weighted outcome among those in disadvantaged neighborhoods minus the average weighted outcome among those in nondisadvantaged neighborhoods.  
 However, in this scenario, that approach would involve multiplying 3 weights--(1) survey weights, (2) inverse probability of selection in the sub-sample weights, and (3) inverse probability of treatment weights. IPW already have efficiency concerns, and we were worried that they might get unweildy. So we wanted to compare IPW to some other options that might perform as well or better but would be similarly simple to implement.
 
 
@@ -673,8 +674,8 @@ The estimators are on the y axis. Show the importance of adjusting for all 3 sou
 selection into survey, selection into subsample, non-random treatment assignment.
 
 Top estimators adjust for 0, 1, or 2 of the soures. Bottom 3 estimators adjust for all 3.
-Review each
 Naive estimator does not adjust for anything. It is just the average outcome among the treated minus the average outcome among the non-treated.
+Review each
 
 IPW, DRWLS and TMLE all  acoun for nonrandom treatment and both selection mechanisms
 We see that each of these methods provides a consistent estimate 
@@ -717,7 +718,7 @@ Note: Following the simulation, we applied the 3 methods to our research questio
 * Link between neighborhood and mental health among adolescents.
   * Disadvantaged neighborhood associated with $\uparrow$ odds of depression/anxiety if urban center 
   * Disadvantaged neighborhood associated with cortisol levels
-* Estimating effects/associations from a survey sub-sample
+* Generalizing effects/associations from a survey sub-sample
   * DRWLS and TMLE vs. IPW
 
 Note: I'd like to wrap up with some overall conclusions from this work
@@ -726,7 +727,7 @@ In this dissertation, we find further support...[read]
   * Living in a disadvantaged neighborhood associated with $\uparrow$ odds of depression/anxiety if that neighborhood is in an urban center but not otherwise.
   * Living in a disadvantaged neighborhood associated with cortisol levels. In sub-sample and for U.S. adolescents.
   
-We also evaluate methods to estimate effects/ associations [read]
+We also evaluate methods to generalize effects/ associations [read]
 specifically, we recommend two DR methods as opposed to IPW. These methods are similar to IPW in terms of their straightforward implementation, but because they are double robust, they perform much better than IPW under incorrect specification of one of the treatment or selection models.
 
 ---
